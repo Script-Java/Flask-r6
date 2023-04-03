@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>R6 Tracker with Flask</title>
+{% endblock %}
+
+{% block body %}
+<form action="" method="post">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-2">
+                <div class="input-group">
+                    <label class="input-group-text bg-dark text-white" for="inputGroupSelect01">Platform</label>
+                    <select class="form-select bg-dark text-white" name="platform" id="inputGroupSelect01">
+                      <option selected disabled>Choose...</option>
+                      <option value="pc">PC</option>
+                      <option value="psn">Playstation</option>
+                      <option value="xbox">Xbox</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="input-group">
+                    <span class="input-group-text bg-dark text-white">User Name</span>
+                    <input type="text" name="username" class="form-control bg-dark text-white">
+                </div>
+            </div>
+            <div class="col-2">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+    </div>
+</form>
+<h1>{{n}}, {{p}}</h1>
+{% endblock %}

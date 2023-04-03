@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>{{n}} Stats</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="row text-center justify-content-center align-items-center">
+            <div class="col-3">
+                <img src="{{pfp_src}}" alt="" class="thumbnail" style="width: 200px; border-radius:50%">
+            </div>
+            <div class="col-8">
+                <h1><strong>{{player_tag}}</strong></h1>
+                <p><i class="bi bi-emoji-dizzy"></i>Profile Views : <strong>{{profile_views}}</strong></p>
+                <p>Level : <strong>{{level}}</strong></p>
+            </div>
+        </div>
+        <div class="row">
+            
+        </div>
+    </div>
+{% endblock %}
