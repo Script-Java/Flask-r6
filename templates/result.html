@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+    <title>{{n}} Stats</title>
+{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="row text-center justify-content-center align-items-center">
+            <div class="col-3">
+                <img src="{{pfp_src}}" alt="" class="thumbnail" style="width: 200px; border-radius:50%; border:5px solid black">
+            </div>
+            <div class="col-8">
+                <h1><strong>{{player_tag}}</strong></h1>
+                <p><i class="fa-solid fa-user pe-3"></i>Profile Views : <strong>{{profile_views}}</strong></p>
+                <p>Level : <strong>{{level}}</strong></p>
+                <img src="{{rp_logo}}" alt="" width="200px">
+                <p>{{rp}}</p>
+            </div>
+        </div>
+    </div>
+    <div class="container d-flex justify-content-center align-items-center flex-wrap" style="margin-top: 100px;">
+        <div class="card mt-5 m-3" style="width: 18rem;">
+            <div class="card-header">
+              General Stats
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">KD : <strong>{{kd}}</strong></li>
+              <li class="list-group-item">Matches : <strong>{{matches}}</strong></li>
+              <li class="list-group-item">Wins : <strong>{{wins}}</strong></li>
+              <li class="list-group-item">Win Ratio : <strong>{{win_ratio}}</strong></li>
+              <li class="list-group-item">Best MMR : <strong>{{best_mmr}}</strong></li>
+              <li class="list-group-item">Average Season MMR : <strong>{{season_mmr}}</strong></li>
+            </ul>
+          </div>
+          <div class="card mt-5 m-3" style="width: 18rem;">
+            <div class="card-header">
+              Ranked Stats
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">W/L : <strong>{{r_wins}} - {{r_loss}}</strong></li>
+              <li class="list-group-item">Total Deaths : <strong>{{r_death}}</strong></li>
+              <li class="list-group-item">Total Kills : <strong>{{r_kills}}</strong></li>
+              <li class="list-group-item">Win Ratio : <strong>{{r_win_ratio}}</strong></li>
+              <li class="list-group-item">KD : <strong>{{r_kd}}</strong></li>
+              <li class="list-group-item">KPM : <strong>{{r_kpm}}</strong></li>
+            </ul>
+          </div>
+    </div>
+{% endblock %}
