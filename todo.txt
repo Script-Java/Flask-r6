@@ -1,4 +1,0 @@
-- Fix NONE error when request is sent
-- Finish About page
-- Finish UI for stats
-- font awesome
